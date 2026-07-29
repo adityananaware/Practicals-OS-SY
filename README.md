@@ -1,165 +1,206 @@
-# 🖥️ Operating System Laboratory
+# Operating System Practical Programs (B.Sc. Computer Science – Second Year)
 
-A complete collection of **Operating System Laboratory** practical programs for **B.Sc. Computer Science (Second Year)**. This repository contains well-documented Python programs covering process management, inter-process communication (IPC), synchronization, multithreading, scheduling, memory management, and deadlock concepts as prescribed in the practical syllabus. :contentReference[oaicite:0]{index=0}
+![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
+![Operating System](https://img.shields.io/badge/Subject-Operating%20System-green.svg)
+![License](https://img.shields.io/badge/License-MIT-orange.svg)
+
+## 📖 About
+
+This repository contains **10 Operating System practical programs** designed for **B.Sc. Computer Science Second Year** students. The practicals cover the fundamental concepts of Operating Systems using **Python**, including Process Synchronization, Inter-Process Communication (IPC), Multithreading, Thread Synchronization, Readers-Writers Problem, Producer-Consumer Problem, and CPU Scheduling Algorithms.
+
+Each practical includes:
+- Aim
+- Python Source Code
+- Sample Output
+- Explanation
+- Viva Questions (optional)
+- Beginner-friendly implementation
 
 ---
 
-## 📚 Course Information
+# Practical List
 
-- **Course:** Operating System Laboratory
-- **Program:** B.Sc. Computer Science (Second Year)
-- **Programming Language:** Python 3
-- **IDE:** Visual Studio Code
-- **Platform:** Windows / Linux
+## Practical 1
+### Producer-Consumer Problem using Semaphores
 
----
+**Aim:**
+To implement the Producer–Consumer problem using Semaphores for process synchronization.
 
-# 📖 Practicals Included
-
-## Practical 1 – Producer-Consumer using Semaphore
-
-### Aim
-Implement the Producer-Consumer problem using Semaphores for process synchronization.
-
-### Topics Covered
+**Topics Covered**
+- Process Synchronization
+- Producer Process
+- Consumer Process
+- Semaphore
 - Multiprocessing
-- Semaphores
-- Producer-Consumer Problem
-- Synchronization
-- Shared Memory
 
 ---
 
-## Practical 2 – Producer-Consumer using Queue
+## Practical 2
+### Inter-Process Communication using Shared Memory and Message Passing
 
-### Aim
-Implement Producer-Consumer communication using Queue.
+**Aim:**
+To demonstrate Inter-Process Communication (IPC) using Shared Memory and Message Passing techniques.
 
-### Topics Covered
-- Queue
-- Multiprocessing
-- Inter-Process Communication (IPC)
-- Synchronization
-
----
-
-## Practical 3 – Producer-Consumer using Pipe
-
-### Aim
-Implement Producer-Consumer communication using Pipe.
-
-### Topics Covered
-- Pipe
+**Topics Covered**
 - IPC
-- Multiprocessing
-- Producer-Consumer
-
----
-
-## Practical 4 – Shared Memory vs Message Passing
-
-### Aim
-Compare Shared Memory and Message Passing communication models.
-
-### Topics Covered
 - Shared Memory
 - Message Passing
+- Queue
 - Multiprocessing
-- IPC
 
 ---
 
-## Practical 5 – Thread Creation and Lifecycle
+## Practical 3
+### Thread Creation and Thread Life Cycle
 
-### Aim
-Create multiple threads and observe their lifecycle.
+**Aim:**
+To study thread creation and the thread life cycle using Python threading.
 
-### Topics Covered
+**Topics Covered**
+- Threads
 - Thread Creation
 - Thread States
-- Thread Lifecycle
-- Python Threading
-
----
-
-## Practical 6 – Thread Execution and Joining
-
-### Aim
-Observe execution order, delays, and thread joining.
-
-### Topics Covered
 - Thread Execution
-- join()
-- Synchronization
-- Multithreading
+- Join()
 
 ---
 
-## Practical 7 – Sequential vs Threaded Execution
+## Practical 4
+### Sequential vs Multithreaded Execution
 
-### Aim
-Compare sequential execution with multithreaded execution.
+**Aim:**
+To compare Sequential Execution and Multithreaded Execution and analyze execution time.
 
-### Topics Covered
-- Sequential Programming
+**Topics Covered**
+- Sequential Processing
 - Multithreading
 - Performance Comparison
-- Execution Time Analysis
+- Execution Time
 
 ---
 
-## Practical 8 – Multithreaded Fibonacci Sequence
+## Practical 5
+### Thread Synchronization using Locks
 
-### Aim
-Generate the Fibonacci sequence using multithreading.
+**Aim:**
+To implement thread synchronization using Locks and demonstrate thread safety while accessing shared resources.
 
-### Topics Covered
-- Threading
-- Fibonacci Series
-- Synchronization
+**Topics Covered**
 - Lock
-
----
-
-## Practical 9 – Thread Synchronization
-
-### Aim
-Demonstrate thread safety and synchronization while accessing shared variables.
-
-### Topics Covered
-- Thread Synchronization
-- Lock
-- Shared Variables
+- Critical Section
 - Race Condition
+- Thread Safety
+- Shared Variables
 
 ---
 
-## Practical 10 – Deadlock Prevention and Synchronization
+## Practical 6
+### Producer-Consumer Problem using Mutex and Semaphores
 
-### Aim
-Implement synchronization techniques to avoid deadlocks and resource conflicts.
+**Aim:**
+To simulate the Producer–Consumer (Bounded Buffer) problem using Mutex Locks and Semaphores.
 
-### Topics Covered
-- Deadlock
-- Mutual Exclusion
+**Topics Covered**
+- Mutex
+- Semaphore
+- Bounded Buffer
 - Synchronization
-- Resource Sharing
+- Multithreading
 
 ---
 
-# 💻 Technologies Used
+## Practical 7
+### Readers-Writers Problem
 
-- Python 3
-- Multiprocessing Module
-- Threading Module
-- Visual Studio Code
+**Aim:**
+To implement the Readers–Writers Problem with reader and writer prioritization.
+
+**Topics Covered**
+- Readers-Writers Problem
+- Synchronization
+- Shared Resources
+- Locks
+- Concurrency
 
 ---
 
-# 📂 Repository Structure
+## Practical 8
+### First Come First Serve (FCFS) Scheduling
 
-```text
-Operating-System-Lab/
+**Aim:**
+To simulate the First Come First Serve (FCFS) CPU Scheduling Algorithm.
+
+**Topics Covered**
+- CPU Scheduling
+- FCFS
+- Process Scheduling
+- Burst Time
+- Arrival Time
+
+---
+
+## Practical 9
+### Scheduling Analysis and Gantt Chart
+
+**Aim:**
+To analyze Waiting Time, Turnaround Time, and Gantt Chart generation for CPU Scheduling.
+
+**Topics Covered**
+- Waiting Time
+- Turnaround Time
+- Gantt Chart
+- Scheduling Analysis
+- CPU Utilization
+
+---
+
+## Practical 10
+### Round Robin Scheduling
+
+**Aim:**
+To implement the Round Robin CPU Scheduling Algorithm using a configurable Time Quantum.
+
+**Topics Covered**
+- Round Robin Scheduling
+- Time Quantum
+- Context Switching
+- CPU Scheduling
+- Performance Analysis
+
+---
+
+# Technologies Used
+
+- Python 3.x
+- multiprocessing
+- threading
+- queue
+- concurrent.futures
+- time
+- random
+
+---
+
+# Learning Outcomes
+
+After completing these practicals, students will be able to:
+
+- Understand Operating System fundamentals.
+- Implement Process Synchronization techniques.
+- Demonstrate Inter-Process Communication (IPC).
+- Create and manage Threads.
+- Apply Thread Synchronization using Locks and Semaphores.
+- Solve Producer-Consumer and Readers-Writers problems.
+- Implement CPU Scheduling algorithms.
+- Analyze Scheduling performance using Waiting Time, Turnaround Time, and Gantt Charts.
+- Compare Sequential and Parallel execution.
+
+---
+
+# Repository Structure
+
+```
+Operating-System-Practicals/
 │
 ├── Practical-01/
 ├── Practical-02/
@@ -172,71 +213,82 @@ Operating-System-Lab/
 ├── Practical-09/
 ├── Practical-10/
 │
-├── README.md
-└── LICENSE
+└── README.md
 ```
 
 ---
 
-# 🚀 Getting Started
+# Prerequisites
+
+- Python 3.x
+- VS Code / PyCharm / IDLE
+- Basic knowledge of Python
+- Basic understanding of Operating System concepts
+
+---
+
+# How to Run
 
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/your-username/Operating-System-Lab.git
+git clone https://github.com/yourusername/Operating-System-Practicals.git
 ```
 
-2. Open the project in **Visual Studio Code**.
+2. Open the project folder.
 
-3. Ensure **Python 3.x** is installed.
+3. Navigate to the required practical.
 
-4. Run any practical using:
+4. Run the Python program.
 
 ```bash
-python practical1.py
-```
-
-or
-
-```bash
-python3 practical1.py
+python practical.py
 ```
 
 ---
 
-# 🎯 Learning Outcomes
+# Concepts Covered
 
-After completing these practicals, students will be able to:
-
-- Understand process creation and synchronization.
-- Implement Inter-Process Communication (IPC).
-- Work with Semaphores, Queues, and Pipes.
-- Create and manage threads.
-- Perform thread synchronization using Locks.
-- Compare sequential and parallel execution.
-- Analyze multithreading performance.
-- Understand deadlock concepts and synchronization techniques.
+- Operating System Basics
+- Processes
+- Threads
+- Synchronization
+- Mutex
+- Semaphores
+- Locks
+- Inter-Process Communication (IPC)
+- Shared Memory
+- Message Passing
+- Producer-Consumer Problem
+- Readers-Writers Problem
+- CPU Scheduling
+- FCFS Scheduling
+- Round Robin Scheduling
+- Waiting Time
+- Turnaround Time
+- Gantt Chart
 
 ---
 
-# 📌 Requirements
+# Suitable For
 
-- Python 3.10 or above
-- Visual Studio Code
-- Windows / Linux Operating System
+- B.Sc. Computer Science
+- B.Sc. IT
+- BCA
+- MCA (Basics)
+- Python Operating System Laboratory
 
 ---
 
-# 👨‍🏫 Author
+## Author
 
-**Aditya Nanaware**  
+**Aditya G. Nanaware**
+
 Assistant Professor  
 Department of Computer Science
 
 ---
 
-## ⭐ Support
+## License
 
-If this repository helps you learn Operating System concepts, consider giving it a **⭐ Star** on GitHub.
-
-Happy Learning! 🚀
+This project is created for educational and academic purposes.
