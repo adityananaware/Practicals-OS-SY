@@ -1,86 +1,44 @@
-import multiprocessing
+# Measure execution time for sequential vs thread execution
+
+import threading
 import time
 
-# -------------------------------
-# Shared Memory Example
-# -------------------------------
 
-def shared_memory_worker(shared_list, index, value):
-    print(f"[Shared Memory] Process {index} writing value {value}")
-
-    shared_list[index] = value
-
-    time.sleep(1)
-
-    print(f"[Shared Memory] Process {index} reads value {shared_list[index]}")
+def worker(id, delay):
+    print(f"Task {id} starting")
+    time.sleep(delay)
+    print(f"Task {id} finished")
 
 
-def shared_memory_demo():
-    print("=== Shared Memory Demo ===")
-
-    shared_list = multiprocessing.Array('i', 5)
-
-    processes = []
+def sequential_demo():
+    start = time.time()
 
     for i in range(5):
-        p = multiprocessing.Process(
-            target=shared_memory_worker,
-            args=(shared_list, i, i * 10)
-        )
+        worker(i, i + 1)
 
-        processes.append(p)
-        p.start()
-
-    for p in processes:
-        p.join()
-
-    print("Final Shared Memory State:", list(shared_list))
-    print()
+    end = time.time()
+    print(f"Sequential execution time: {end - start:.2f} seconds\n")
 
 
-# -------------------------------
-# Message Passing Example
-# -------------------------------
-
-def sender(queue, value):
-    print(f"[Sender] Sending: {value}")
-    queue.put(value)
-
-
-def receiver(queue):
-    value = queue.get()
-    print(f"[Receiver] Received: {value}")
-
-
-def message_passing_demo():
-    print("=== Message Passing Demo ===")
-
-    queue = multiprocessing.Queue()
-
-    processes = []
+def threaded_demo():
+    threads = []
+    start = time.time()
 
     for i in range(5):
-        sender_process = multiprocessing.Process(
-            target=sender,
-            args=(queue, i * 100)
-        )
+        t = threading.Thread(target=worker, args=(i, i + 1))
+        threads.append(t)
+        t.start()
 
-        receiver_process = multiprocessing.Process(
-            target=receiver,
-            args=(queue,)
-        )
+    for t in threads:
+        t.join()
 
-        processes.extend([sender_process, receiver_process])
-
-        sender_process.start()
-        receiver_process.start()
-
-    for p in processes:
-        p.join()
-
-    print("Message Passing Demo Complete")
+    end = time.time()
+    print(f"Threaded execution time: {end - start:.2f} seconds\n")
 
 
 if __name__ == "__main__":
-    shared_memory_demo()
-    message_passing_demo()
+    print("=== Sequential Demo ===")
+    sequential_demo()
+
+    print("=== Threaded Demo ===")
+    threaded_demo()
