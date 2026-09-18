@@ -11,9 +11,9 @@ This repository contains **10 Operating System practical programs** designed for
 Each practical includes:
 - Aim
 - Python Source Code
-- --Sample Output--
-- --Explanation--
-- --Viva Questions (optional)--
+- ~~Sample Output~~
+- ~~Explanation~~
+- ~~Viva Questions (optional)~~
 - Beginner-friendly implementation
 
 ---
